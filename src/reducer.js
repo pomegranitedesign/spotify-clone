@@ -3,13 +3,17 @@ export const initialState = {
 	playlists: [],
 	isPlaying: false,
 	item: null,
-	// REMOVE AFTER DEVELOPMENT
+	// TODO REMOVE AFTER DEVELOPMENT
 	token:
 		'BQCHrSQxy2HNRPd1Jjwgw5SdRl3rLamCpdE5CfoK6yPhbrwEtKGUJ5uRq9fEKh2NEd2KiwQxNV8QIaZdAvKypX2xh1C-PqadPMisb-k9jD9-GaOgIsgnM33LsTPW1tFI1mz1dpbIjoMmvMQYep13G0KmBLMQB7Fd'
 }
 
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
+		case 'SET_DISCOVER_WEEKLY':
+			return { ...state, discover_weekly: action.discover_weekly }
+		case 'SET_PLAYLISTS':
+			return { ...state, playlists: action.playlists }
 		case 'SET_TOKEN':
 			return { ...state, token: action.token }
 		case 'SET_USER':

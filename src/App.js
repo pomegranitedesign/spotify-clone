@@ -19,9 +19,22 @@ const App = () => {
 			dispatch({ type: 'SET_TOKEN', token: _token })
 
 			_spotify.setAccessToken(_token)
+
 			_spotify
 				.getMe()
 				.then((user) => dispatch({ type: 'SET_USER', user }))
+
+			_spotify
+				.getUserPlaylists()
+				.then((playlists) =>
+					dispatch({ type: 'SET_PLAYLISTS', playlists })
+				)
+
+			_spotify
+				.getPlaylist('37i9dQZEVXcW4H5oeXaBzw')
+				.then((discover_weekly) =>
+					dispatch({ type: 'SET_DISCOVER_WEEKLY', discover_weekly })
+				)
 		}
 	}, [])
 
