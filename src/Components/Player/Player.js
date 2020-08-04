@@ -1,7 +1,7 @@
 import React from 'react'
-import Sidebar from './Sidebar'
-import Body from './Body'
-import Footer from './Footer'
+import Sidebar from '../Sidebar/Sidebar'
+import Body from '../Body/Body'
+import Footer from '../Footer/Footer'
 import './Player.css'
 
 const Player = ({ spotify }) => {

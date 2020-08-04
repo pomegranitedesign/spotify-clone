@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import SearchIcon from '@material-ui/icons/Search'
 import { Avatar } from '@material-ui/core'
-import { useDataLayerValue } from './DataLayer'
+import { useDataLayerValue } from '../../DataLayer'
 import './Header.css'
 
 const Header = ({ spotify }) => {
-	const [ { user }, dispatch ] = useDataLayerValue()
+	const [ { user } ] = useDataLayerValue()
 	return (
 		<header className="header">
 			<div className="header__left">

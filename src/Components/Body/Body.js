@@ -1,15 +1,14 @@
 import React from 'react'
-import Header from './Header'
-import SongRow from './SongRow'
-import { useDataLayerValue } from './DataLayer'
+import Header from '../Header/Header'
+import SongRow from '../SongRow/SongRow'
+import { useDataLayerValue } from '../../DataLayer'
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import './Body.css'
 
 const Body = ({ spotify }) => {
-	const [ { discover_weekly }, dispatch ] = useDataLayerValue()
-	console.log(discover_weekly)
+	const [ { discover_weekly } ] = useDataLayerValue()
 	return (
 		<div className="body">
 			<Header spotify={spotify} />

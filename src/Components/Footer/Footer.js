@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Grid, Slider } from '@material-ui/core'
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline'
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious'
